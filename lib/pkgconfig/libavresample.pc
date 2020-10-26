@@ -1,0 +1,14 @@
+prefix=/home/lxd/arm/ffmpeg/install
+exec_prefix=${prefix}
+libdir=/home/lxd/arm/ffmpeg/install/lib
+includedir=/home/lxd/arm/ffmpeg/install/include
+
+Name: libavresample
+Description: Libav audio resampling library
+Version: 4.0.0
+Requires: 
+Requires.private: libavutil >= 56.55.100
+Conflicts:
+Libs: -L${libdir}  -lavresample 
+Libs.private: -lm
+Cflags: -I${includedir}

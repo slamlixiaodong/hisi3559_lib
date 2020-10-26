@@ -1,0 +1,14 @@
+prefix=/home/lxd/arm/ffmpeg/install
+exec_prefix=${prefix}
+libdir=/home/lxd/arm/ffmpeg/install/lib
+includedir=/home/lxd/arm/ffmpeg/install/include
+
+Name: libswresample
+Description: FFmpeg audio resampling library
+Version: 3.8.100
+Requires: 
+Requires.private: libavutil >= 56.55.100
+Conflicts:
+Libs: -L${libdir}  -lswresample 
+Libs.private: -lm
+Cflags: -I${includedir}
